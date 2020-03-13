@@ -10,16 +10,19 @@ const tempUI = document.querySelector('#temp');
 
 // Return url with zip code and key.
 const baseUrl = zipcode => {
-  return `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${KEY}`;
+  if (location.protocol === 'http:') {
+    return `http://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${KEY}`;
+  } else {
+    return `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${KEY}`;
+  }
 };
 const info = [];
 // Event listener when click generate button to fetch data.
 generateBtn.addEventListener('click', () => {
   if (isEmpty(zipUI.value)) {
-    fetch(baseUrl(zipUI.value))
+    fetch(baseUrl(zipUI.value), { credentials: 'same-origin' })
       .then(res => res.json())
       .then(data => {
-        console.log(data.weather, data.sys, data.name);
         const { country } = data.sys;
         const { name } = data;
         createItem(`Country: ${country}`, false);
