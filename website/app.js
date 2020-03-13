@@ -10,7 +10,7 @@ const tempUI = document.querySelector('#temp');
 
 // Return url with zip code and key.
 const baseUrl = zipcode => {
-  return `http://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${KEY}`;
+  return `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${KEY}`;
 };
 const info = [];
 // Event listener when click generate button to fetch data.
