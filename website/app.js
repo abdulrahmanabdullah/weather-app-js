@@ -16,7 +16,7 @@ const info = [];
 // Event listener when click generate button to fetch data.
 generateBtn.addEventListener('click', () => {
   if (isEmpty(zipUI.value)) {
-    fetch(baseUrl(zipUI.value), { credentials: 'same-origin' })
+    fetch(baseUrl(zipUI.value))
       .then(res => res.json())
       .then(data => {
         console.log(data.weather, data.sys, data.name);

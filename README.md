@@ -10,7 +10,7 @@ Use express simple route to get and post data.
 
 # Run app :
 
-Download this [repo]() then run
+Download this [repo](https://github.com/abdulrahmanabdullah/weather-app-js.git) then run
 
 ```
 npm install
@@ -24,4 +24,4 @@ OR
 
 ## Live demo :
 
-[LiveDemo]()
+[LiveDemo](https://abdulrahmanabdullah.github.io/weather-app-js/website/)
