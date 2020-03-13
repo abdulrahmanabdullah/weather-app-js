@@ -1,0 +1,209 @@
+body {
+  background: #fffff8;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  height: 100vh;
+}
+
+#app {
+  display: grid;
+  grid-auto-rows: 0fr 1fr auto 1fr;
+  grid-template-columns: 1fr;
+  background: #f23557;
+  color: #f0d43a;
+  justify-content: space-around;
+  grid-gap: 1em;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+}
+.main_content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.holder {
+}
+.zip {
+  width: 33%;
+}
+.feel {
+  display: flex;
+  flex-direction: column;
+}
+.myInput {
+  width: 100%;
+}
+.entry {
+  background: rgba(59, 74, 107, 0.4);
+}
+
+hr {
+  margin: 5px auto;
+}
+
+.sec-feel {
+  text-align: center;
+}
+
+#entryHolder {
+  display: flex;
+  justify-content: space-around;
+}
+.list_information {
+  width: 100%;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.list_information li {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
+#date {
+}
+
+#temp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.headline {
+  font-size: 4rem;
+  text-align: center;
+}
+.title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label {
+  display: block;
+  font-size: 27px;
+}
+
+input {
+  display: block;
+  height: 60px;
+  width: 320px;
+  background: #22b2da;
+  color: #f0d43a;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  border: none;
+}
+
+button {
+  width: 50%;
+  height: 100px;
+  background: #3b4a6b;
+  color: #f0d43a;
+  font-size: 26px;
+  font-family: 'Oswald', sans-serif;
+  border: none;
+  box-shadow: 2px 4px 5px #444;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+textarea {
+  background: #22b2da;
+  color: #f0d43a;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder {
+  /* Firefox, Chrome, Opera */
+  color: #f0d43a;
+  font-family: 'Oswald', sans-serif;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #f0d43a;
+  font-family: 'Oswald', sans-serif;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #f0d43a;
+  font-family: 'Oswald', sans-serif;
+}
+
+@media (max-width: 470px) {
+  #app {
+    grid-auto-rows: 0fr;
+    grid-template-columns: auto;
+  }
+
+  .headline {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .main_content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  label {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .zip {
+    width: 90%;
+  }
+
+  .myInput {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  button {
+    width: 90%;
+    height: 50px;
+    margin: 0 auto;
+  }
+  .entry {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    height: 100%;
+  }
+  .title {
+    font-size: 1rem;
+  }
+
+  #date h1,
+  p {
+    font-size: 1rem;
+  }
+
+  #temp h1,
+  p {
+    font-size: 1rem;
+  }
+  #content h1,
+  p {
+    font-size: 1rem;
+  }
+}
