@@ -33,6 +33,7 @@ const corsConfig = {
 };
 app.use(cors());
 
+// add cors manually .
 // app.use((req, res, next) => {
 //   res.header(
 //     'Access-Control-Allow-Origin',
@@ -45,9 +46,9 @@ app.use(cors());
 //     res.header('Access-Control-Allow-Methods', 'POST,PUT,GET,DELETE');
 //     return res.status(200).json({});
 //   }
-
 //   next();
 // });
+
 // Initialize the main project folder
 app.use(express.static(path.join(__dirname, 'website')));
 // Init Route
